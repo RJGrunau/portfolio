@@ -24,8 +24,11 @@ const HOMEPAGE_QUERY = `
       jobtitle
     }
     allPosts (first: $limit) {
+      id
+      title
       excerpt
       date
+      slug
       coverPhoto {
         alt
         responsiveImage (imgixParams: { fit: crop, w: 300, h: 300, auto: format }){
@@ -60,7 +63,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({data}) {
-  console.log(data);
+  const posts = data.allPosts;
   return (
     <>
       <Head>
@@ -68,7 +71,9 @@ export default function Home({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
-        hi
+        {posts.map(p => (
+          <div key={p.id}>{p.title}</div>
+        ))}
       </MainLayout>
     </>
      

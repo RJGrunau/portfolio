@@ -1,0 +1,17 @@
+.item {
+    display: block;
+}
+
+.blogLink {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap column;
+}
+.title{
+    display: inline-block;
+    width: 100%;
+}
+
+.postTease {
+    width: 100%;
+}
