@@ -65,6 +65,7 @@ export async function getStaticProps() {
 
 export default function Home({data}) {
   const posts = data.allPosts;
+  console.log(posts);
   return (
     <>
       <Head>

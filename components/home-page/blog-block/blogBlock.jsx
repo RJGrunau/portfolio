@@ -3,6 +3,7 @@ import styles from './blogBlock.module.css'
 import BlogItem from '../blog-item/blogItem'
 
 const BlogBlock = ({posts}) => {
+    
     return ( 
         <section className={styles.section}>
             <ol>
