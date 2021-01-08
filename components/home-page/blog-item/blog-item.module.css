@@ -10,11 +10,7 @@
     justify-content: center;
     text-align: left;
     text-decoration: none;
-    color: black;
-}
-
-.blogLink:visited {
-    color:rgba(27, 27, 27, .95);
+    
 }
 
 .titleBlock {
@@ -33,5 +29,5 @@
 .postTease {
     width: 100%;
     margin: 10px 0;
-    color:rgba(27, 27, 27, 0.8);
+    
 }

@@ -67,8 +67,34 @@ select {
   font: inherit;
 }
 
+/* global styles */
+
+p{
+  color: var(--light-font-color-faded);
+}
+
 time{
   color: var(--light-font-color-faded);
+}
+
+/*link styles*/
+a[class]{
+  color: var(--light-font-color-faded)
+}
+
+a[class]:visited{
+  color: var(--light-font-color-faded);
+}
+a[class]:hover {
+  color: var(--light-font-color);
+  transition: ease-in 0.5ms;
+}
+
+h1,
+h2,
+h3,
+h4{
+  color: var(--light-font-color);
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
