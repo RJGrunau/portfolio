@@ -4,8 +4,10 @@ import { Image } from 'react-datocms'
 const AuthorBlock = ({authData}) => {
     return (  
         <section className={styles.authSection}>
-            <h1>{authData.authorname}</h1>
-            <h3>{authData.jobtitle}</h3>
+            <div className={styles.busCard}>
+                <h1>{authData.authorname}</h1>
+                <h3>{authData.jobtitle}</h3>
+            </div>
             <Image data={authData.authorPhoto.responsiveImage} />
         </section>
     );
