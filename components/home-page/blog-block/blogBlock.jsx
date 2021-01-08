@@ -13,7 +13,7 @@ const BlogBlock = ({posts}) => {
                         slug={p.slug}
                         title={p.title}
                         excerpt={p.excerpt}
-                        coverPhot={p.coverPhoto}
+                        coverPhoto={p.coverPhoto}
                         date={p.date}
                     />
                 ))}
