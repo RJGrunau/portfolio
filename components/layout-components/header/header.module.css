@@ -1,4 +1,12 @@
 .header{
     grid-column: 1/4;
     grid-row: 1/2;
+    display: flex;
+    flex-flow: wrap column;
+    padding: 1em 0.5em;
+}
+
+.logoHolder {
+    width: 100px;
+    margin: 0 auto;
 }
