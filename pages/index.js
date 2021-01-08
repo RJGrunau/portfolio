@@ -3,6 +3,7 @@ import { request } from '../libs/datocms'
 import styles from '../styles/Home.module.css'
 import MainLayout from '../components/layout-components/layout/layout'
 import BlogBlock from '../components/home-page/blog-block/blogBlock'
+import AuthorBlock from '../components/home-page/author-block/authorBlock'
 
 const HOMEPAGE_QUERY = `
   query HomePage ($limit: IntType){
@@ -65,7 +66,8 @@ export async function getStaticProps() {
 
 export default function Home({data}) {
   const posts = data.allPosts;
-  console.log(posts);
+  const authData = data.author
+  
   return (
     <>
       <Head>
@@ -73,6 +75,7 @@ export default function Home({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
+        <AuthorBlock authData={authData}/>
         <BlogBlock posts={posts}/>
       </MainLayout>
     </>
