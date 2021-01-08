@@ -8,3 +8,8 @@
     width: 100%;
     margin: 25px 0;
 }
+
+.authPic{
+    padding: 1.5em;
+    background-color: rgb(75, 74, 74);
+}

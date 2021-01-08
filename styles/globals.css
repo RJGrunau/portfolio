@@ -1,4 +1,9 @@
 /*resets*/
+:root{
+  --light-font-color: rgba(253, 253, 253, 0.95);
+  --light-font-color-faded: rgba(253, 253, 253, 0.80);
+  --dark-background: rgba(27, 27, 27, 0.8);
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -38,6 +43,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-color: var(--dark-background);
+  color: var(--light-font-color);
 }
 
 /* A elements that don't have a class get default styles */
@@ -58,6 +65,10 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+time{
+  color: var(--light-font-color-faded);
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */

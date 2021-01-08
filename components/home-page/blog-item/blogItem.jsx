@@ -20,7 +20,7 @@ const BlogItem = ({slug,title,coverPhoto,excerpt,date}) => {
                         <h2 className={styles.title}>
                             {title}
                         </h2>
-                        <time className={styles.date}>{date}</time>
+                        <time>{date}</time>
                     </div>
                     <Image data={coverPhoto.responsiveImage} explicitWidth="100%"/>
                     <article className={styles.postTease} dangerouslySetInnerHTML={{__html: postExcerpt}}/>

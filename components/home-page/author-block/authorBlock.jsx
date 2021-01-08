@@ -8,7 +8,9 @@ const AuthorBlock = ({authData}) => {
                 <h1>{authData.authorname}</h1>
                 <h3>{authData.jobtitle}</h3>
             </div>
-            <Image data={authData.authorPhoto.responsiveImage} />
+            <div className={styles.authPic}>
+                <Image data={authData.authorPhoto.responsiveImage} />
+            </div>
         </section>
     );
 }
