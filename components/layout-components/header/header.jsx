@@ -12,6 +12,31 @@ const SiteHeader = () => {
                     </a>
                 </Link>
             </div>
+            <nav className={styles.siteNav}>
+                <ul className={styles.navList}>
+                    <li>
+                        <Link href="/posts">
+                            <a className={styles.navLink}>
+                                Posts
+                            </a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/word">
+                            <a className={styles.navLink}>
+                                Work
+                            </a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/about">
+                            <a className={styles.navLink}>
+                                About
+                            </a>
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
         </header>
     );
 }
