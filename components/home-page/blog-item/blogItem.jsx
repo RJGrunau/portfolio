@@ -4,7 +4,7 @@ import styles from './blog-item.module.css'
 import Link from 'next/link'
 import { Image } from 'react-datocms'
 
-const BlogItem = ({slug,title,coverPhoto,excerpt}) => {
+const BlogItem = ({slug,title,coverPhoto,excerpt,date}) => {
     const [postExcerpt, setPostExcerpt ] = useState(null);
 
     useEffect(async () => {
@@ -16,9 +16,12 @@ const BlogItem = ({slug,title,coverPhoto,excerpt}) => {
         <li className={styles.item}>
             <Link href={`blog/${slug}`}>
                 <a className={styles.blogLink}>
-                    <h2 className={styles.title}>
-                        {title}
-                    </h2>
+                    <div className={styles.titleBlock}>
+                        <h2 className={styles.title}>
+                            {title}
+                        </h2>
+                        <time className={styles.date}>{date}</time>
+                    </div>
                     <Image data={coverPhoto.responsiveImage} explicitWidth="100%"/>
                     <article className={styles.postTease} dangerouslySetInnerHTML={{__html: postExcerpt}}/>
 

@@ -32,7 +32,7 @@ const HOMEPAGE_QUERY = `
       slug
       coverPhoto {
         alt
-        responsiveImage (imgixParams: { fit: crop, w: 300, h: 300, auto: format }){
+        responsiveImage (imgixParams: { fit: fill, w: 400, h: 400, auto: format }){
           sizes
           aspectRatio
           alt
