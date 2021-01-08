@@ -1,7 +1,9 @@
 import React, {useState, useEffect } from 'react'
+import markdownToHTML  from '../../../libs/markdownToHTML'
 import styles from './blog-item.module.css'
 import Link from 'next/link'
 import { Image } from 'react-datocms'
+
 const BlogItem = ({slug,title,coverPhoto,excerpt}) => {
     const [postExcerpt, setPostExcerpt ] = useState('');
 

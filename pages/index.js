@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { request } from '../libs/datocms'
 import styles from '../styles/Home.module.css'
 import MainLayout from '../components/layout-components/layout/layout'
+import BlogBlock from '../components/home-page/blog-block/blogBlock'
 
 const HOMEPAGE_QUERY = `
   query HomePage ($limit: IntType){
@@ -71,9 +72,7 @@ export default function Home({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
-        {posts.map(p => (
-          <div key={p.id}>{p.title}</div>
-        ))}
+        <BlogBlock posts={posts}/>
       </MainLayout>
     </>
      
