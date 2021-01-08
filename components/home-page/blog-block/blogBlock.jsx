@@ -5,7 +5,7 @@ const BlogBlock = ({posts}) => {
     
     return ( 
         <section className={styles.section}>
-            <ol>
+            <ol role="list">
                 {posts.map( p => (
                     <BlogItem 
                         key={p.id}
