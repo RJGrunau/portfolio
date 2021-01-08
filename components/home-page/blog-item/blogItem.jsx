@@ -24,7 +24,6 @@ const BlogItem = ({slug,title,coverPhoto,excerpt,date}) => {
                     </div>
                     <Image data={coverPhoto.responsiveImage} explicitWidth="100%"/>
                     <article className={styles.postTease} dangerouslySetInnerHTML={{__html: postExcerpt}}/>
-
                 </a>
             </Link>
         </li>
