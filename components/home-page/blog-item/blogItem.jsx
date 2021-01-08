@@ -5,16 +5,16 @@ import Link from 'next/link'
 import { Image } from 'react-datocms'
 
 const BlogItem = ({slug,title,coverPhoto,excerpt}) => {
-    const [postExcerpt, setPostExcerpt ] = useState('');
+    const [postExcerpt, setPostExcerpt ] = useState(null);
 
     useEffect(async () => {
-        const text = markdownToHTML(excerpt);
+        const text = await markdownToHTML(excerpt);
         setPostExcerpt(text);
     })
 
     return ( 
         <li className={styles.item}>
-            <Link href={slug}>
+            <Link href={`blog/${slug}`}>
                 <a className={styles.blogLink}>
                     <h2 className={styles.title}>
                         {title}
