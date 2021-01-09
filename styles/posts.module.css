@@ -1,3 +1,26 @@
 .postSection {
     width: 100%;
+    margin-top: 50px;
+    padding: 1em 0.5em;
+}
+
+.ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.li {
+    width: 100%;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid rgba(26, 25, 25, 0.85);
+    font-size: 1.4em;
+}
+
+.time {
+    color: rgba(231, 230, 230, 0.75);
+    font-size: 0.8em;
 }

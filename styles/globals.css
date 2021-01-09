@@ -79,7 +79,8 @@ time{
 
 /*link styles*/
 a[class]{
-  color: var(--light-font-color-faded)
+  color: var(--light-font-color-faded);
+  text-decoration: none;
 }
 
 a[class]:visited{
@@ -100,6 +101,8 @@ h4{
 picture {
   background-color: var(--light-font-color-faded);
 }
+
+
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
