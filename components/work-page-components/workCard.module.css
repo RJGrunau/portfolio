@@ -1,0 +1,23 @@
+.workCard {
+    margin: 35px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
+}
+
+.projectImage {
+    grid-column: 1/3;
+    grid-row: 1/4;
+}
+
+.projTitleCard {
+    z-index: 20;
+    grid-column: 1/3;
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: center;
+}
+
+.projTitle {
+    font-size: 2em;
+}
