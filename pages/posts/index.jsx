@@ -25,6 +25,8 @@ export async function getStaticProps(){
         }
     }
 }
+
+
 const PostsPage = ({data}) => {
     
     return ( 
@@ -33,7 +35,7 @@ const PostsPage = ({data}) => {
                 <ol className={styles.ol}>
                     {data.allPosts.map(p => (
                         <li className={styles.li} key={p.id}>
-                            <Link href={`/${p.slug}`}>
+                            <Link href={`/posts/${p.slug}`}>
                                 <a className="link">
                                     <div>
                                         {p.title}
