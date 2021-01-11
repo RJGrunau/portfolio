@@ -1,6 +1,7 @@
 import {request } from '../../libs/datocms'
 import styles from '../../styles/work-page.module.css'
 import MainLayout from '../../components/layout-components/layout/layout'
+import WorkCard from '../../components/work-page-components/workCard'
 
 
 const WORKPAGE_QUERY = `
@@ -46,7 +47,12 @@ const WorkPage = ({data}) => {
         <MainLayout>
             <section className={styles.workSection}>
                 {allProjects.map(proj => (
-                    <h2>{proj.title}</h2>
+                    <WorkCard 
+                        key={proj.id}
+                        slug={proj.slug}
+                        title={proj.title}
+                        coverImage={proj.coverImage}
+                    />
                 ))}
             </section>
         </MainLayout>
