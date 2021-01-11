@@ -1,9 +1,15 @@
 .article{
     width: 100%;
+    margin-top: 75px;
+    padding: 1em 0.5em;
+}
+
+.titleBlock{
+    margin: 25px 0;
 }
 
 .postContent {
-    padding: 1em 0.5em;
+    /* padding: 1em 0.5em; */
     margin-top: 25px;
-    font-size: 1.16em;
+    font-size: 1.18em;
 }
