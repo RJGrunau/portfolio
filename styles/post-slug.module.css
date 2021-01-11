@@ -7,7 +7,13 @@
 .titleBlock{
     margin: 25px 0;
 }
-
+.postTitle {
+    margin: 0;
+    font-size: 1.8em;
+}
+.postDate {
+   font-size: 1.16em; 
+}
 .postContent {
     /* padding: 1em 0.5em; */
     margin-top: 25px;

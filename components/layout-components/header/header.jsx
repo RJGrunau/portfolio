@@ -22,7 +22,7 @@ const SiteHeader = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/word">
+                        <Link href="/work">
                             <a className={styles.navLink}>
                                 Work
                             </a>
