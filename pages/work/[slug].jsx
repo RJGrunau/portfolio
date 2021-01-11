@@ -45,6 +45,29 @@ const PROJECTBYSLUG_QUERY = `
         }
     }
 `
+export async function getStaticPaths(){
+    const data = await request({query: `{allProjects {slug}}`})
+
+    return {
+        paths: data.allProjects.map((proj) => `/work/${proj.slug}`),
+        fallback: false,
+    }
+}
+
+export async function getStaticProps({params}){
+    const data = await request({
+        query: PROJECTBYSLUG_QUERY,
+        variables: {
+            slug: params.slug
+        }
+    })
+
+    return {
+        props: {
+            data,
+        }
+    }
+}
 
 const Project = () => {
     return ( 
