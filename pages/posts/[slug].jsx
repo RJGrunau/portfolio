@@ -1,4 +1,7 @@
+import { useEffect, useState } from 'react';
+import MainLayout from '../../components/layout-components/layout/layout';
 import { request } from '../../libs/datocms';
+import markdownToHtml from '../../libs/markdownToHTML';
 import styles from '../../styles/post-slug.module.css'
 
 const POSTBYSLUG_QUERY = `
@@ -52,11 +55,19 @@ export async function getStaticProps({params}){
 
 
 const PostSlug = ({data}) => {
-    console.log(data);
-    return ( 
-        <article className={styles.article}>
+    const [pageContent, setContent] = useState(null);
 
-        </article>
+    useEffect(async () => {
+        const text = await markdownToHtml(data.post.content);
+        setContent(text)
+    })
+    return ( 
+        <MainLayout>
+            <article className={styles.article}>
+            
+            <div className={styles.postContent} dangerouslySetInnerHTML={{__html: pageContent}}/>
+            </article>
+        </MainLayout>
     );
 }
  

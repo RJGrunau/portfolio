@@ -1,3 +1,9 @@
 .article{
     width: 100%;
 }
+
+.postContent {
+    padding: 1em 0.5em;
+    margin-top: 25px;
+    font-size: 1.16em;
+}
