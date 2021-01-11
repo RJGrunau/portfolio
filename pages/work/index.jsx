@@ -44,9 +44,11 @@ const WorkPage = ({data}) => {
     const allProjects = data.allProjects
     return ( 
         <MainLayout>
-            {allProjects.map(proj => (
-                <h2>{proj.title}</h2>
-            ))}
+            <section className={styles.workSection}>
+                {allProjects.map(proj => (
+                    <h2>{proj.title}</h2>
+                ))}
+            </section>
         </MainLayout>
     );
 }
