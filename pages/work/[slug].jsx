@@ -69,11 +69,21 @@ export async function getStaticProps({params}){
     }
 }
 
-const Project = () => {
-    return ( 
-        <article className={styles.workItem}>
+const Project = ({data}) => {
+    const project = data.project
+    const [content, setContent] = useState('');
 
-        </article>
+    useEffect(async () => {
+        const text = await markdownToHtml(project.content);
+
+        setContent(text);
+    })
+    return ( 
+        <MainLayout>
+            <article className={styles.workItem}>
+                <div className={styles.projectContent} dangerouslySetInnerHTML={{__html: content}}/>
+            </article>
+        </MainLayout>
     );
 }
  

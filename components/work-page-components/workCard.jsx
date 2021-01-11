@@ -5,7 +5,7 @@ import styles from './workCard.module.css';
 
 const WorkCard = ({slug,title,coverImage}) => {
     return ( 
-        <Link href={slug} >
+        <Link href={`work/${slug}`} >
             <a className={styles.workCard}>
                 <div className={styles.projTitleCard}>
                     <h2 className={styles.projTitle}>{title}</h2>
