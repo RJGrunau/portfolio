@@ -2,7 +2,7 @@ import { request } from '../../libs/datocms';
 import styles from '../../styles/post-slug.module.css'
 
 const POSTBYSLUG_QUERY = `
-    query PostBySlug($slug String){
+    query PostBySlug ($slug: String){
         post(filter: {slug: {eq: $slug}}) {
             date
             title
@@ -25,6 +25,14 @@ const POSTBYSLUG_QUERY = `
         }
     }
 `
+export async function getStaticPaths(){
+    const data = await request({query: `{allPosts {slug}}`})
+
+    return {
+        paths: data.allPosts.map((post) => `/posts/${post.slug}`),
+        fallback: false,
+    }
+}
 
 export async function getStaticProps({params}){
     const data = await request({
@@ -41,14 +49,7 @@ export async function getStaticProps({params}){
     }
 }
 
-export async function getStaticPaths(){
-    const data = await request({query: `{allPosts {slug}}`})
 
-    return {
-        paths: data.allPosts.map((post) => `/posts/${post.slug}`),
-        fallback: false,
-    }
-}
 
 const PostSlug = ({data}) => {
     console.log(data);
