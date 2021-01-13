@@ -16,3 +16,32 @@
 .galleryImage {
     margin: 15px 0;
 }
+
+@media screen and (min-width: 834px){
+    .workItem {
+        max-width: 800px;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 25px;
+    }
+
+    .image {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .projectContent {
+        margin: 0;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .projectGallery {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+
+}

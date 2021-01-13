@@ -84,7 +84,9 @@ const Project = ({data}) => {
     return ( 
         <MainLayout>
             <article className={styles.workItem}>
-                <Image data={project.coverImage.responsiveImage}/>
+                <div className={styles.image}>
+                    <Image data={project.coverImage.responsiveImage}/>
+                </div>
                 <div className={styles.projectContent} dangerouslySetInnerHTML={{__html: content}}/>
                 <div className={styles.projectGallery}>
                     {projGallery.map(img => (
