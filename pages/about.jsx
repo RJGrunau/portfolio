@@ -55,6 +55,7 @@ const AboutPage = ({ data }) => {
                 <div className={styles.aboutImage}>
                     <Image data={pageImage.responsiveImage}/>
                 </div>
+                <div className={styles.pageText} dangerouslySetInnerHTML={{__html: text}}/>
             </section>
         </MainLayout>
     );
