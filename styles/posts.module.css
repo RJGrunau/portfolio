@@ -24,3 +24,10 @@
     color: rgba(231, 230, 230, 0.75);
     font-size: 0.8em;
 }
+
+@media screen and (min-width: 834px){
+    .ol {
+        margin: 0 auto;
+        max-width: 775px;
+    }
+}
