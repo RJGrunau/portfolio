@@ -1,5 +1,6 @@
 .authSection {
     width: 100%;
+    margin-top: 50px;
     text-align: center;
     padding: 0.5em;
 }
@@ -12,4 +13,16 @@
 .authPic{
     padding: 1.3em;
     background-color: rgba(253, 253, 253, 0.95);
+}
+
+@media screen and (min-width: 834px){
+    .authSection {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .authPic {
+        background-color: transparent;
+        display: none;
+    }
 }

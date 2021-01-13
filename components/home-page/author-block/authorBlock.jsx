@@ -9,7 +9,7 @@ const AuthorBlock = ({authData}) => {
                 <h3>{authData.jobtitle}</h3>
             </div>
             <div className={styles.authPic}>
-                <Image data={authData.authorPhoto.responsiveImage} />
+                <Image  data={authData.authorPhoto.responsiveImage} explicitWidth="100%" />
             </div>
         </section>
     );
