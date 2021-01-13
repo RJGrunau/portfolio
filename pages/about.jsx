@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import { request } from '../libs/datocms'
 import markdownToHTML from '../libs/markdownToHTML'
 
-import styles from '../styles/about-page.module.css'
+import { Image } from 'react-datocms'
 import MainLayout from '../components/layout-components/layout/layout'
+import styles from '../styles/about-page.module.css'
 
 const ABOUTPAGE_QUERY = `
     query AboutPage {
@@ -39,6 +40,7 @@ export async function getStaticProps() {
 }
 
 const AboutPage = ({ data }) => {
+    const pageImage = data.page.pageImage
     const [text, setText ] = useState('')
 
     useEffect(async () => {
@@ -50,7 +52,9 @@ const AboutPage = ({ data }) => {
     return ( 
         <MainLayout>
             <section className={styles.aboutSection}>
-
+                <div className={styles.aboutImage}>
+                    <Image data={pageImage.responsiveImage}/>
+                </div>
             </section>
         </MainLayout>
     );
