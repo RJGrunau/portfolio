@@ -3,6 +3,16 @@
 }
 
 .projectContent {
-    font-size: 1.18em;
+    font-size: 1.22em;
+    margin: 15px 0;
+}
+
+.projectGallery {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+}
+
+.galleryImage {
     margin: 15px 0;
 }

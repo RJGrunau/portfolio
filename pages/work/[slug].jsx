@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { request } from '../../libs/datocms';
 import markdownToHtml from '../../libs/markdownToHTML';
 
+import { Image } from 'react-datocms'
 import MainLayout from '../../components/layout-components/layout/layout';
 import styles from '../../styles/work-slug.module.css';
 
@@ -70,8 +71,10 @@ export async function getStaticProps({params}){
 }
 
 const Project = ({data}) => {
-    const project = data.project
+    const project = data.project;
+    const projGallery = data.project.projectImages;
     const [content, setContent] = useState('');
+
 
     useEffect(async () => {
         const text = await markdownToHtml(project.content);
@@ -81,7 +84,15 @@ const Project = ({data}) => {
     return ( 
         <MainLayout>
             <article className={styles.workItem}>
+                <Image data={project.coverImage.responsiveImage}/>
                 <div className={styles.projectContent} dangerouslySetInnerHTML={{__html: content}}/>
+                <div className={styles.projectGallery}>
+                    {projGallery.map(img => (
+                        <div className={styles.galleryImage}>
+                            <Image data={img.responsiveImage} />
+                        </div>
+                    ))}
+                </div>
             </article>
         </MainLayout>
     );
