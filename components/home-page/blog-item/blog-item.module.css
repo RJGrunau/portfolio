@@ -37,7 +37,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 75px 1fr;
-        gap: 10px;
+        column-gap: 25px;
+        row-gap: 35px;
     }
 
     .blogImage {
