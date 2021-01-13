@@ -2,3 +2,12 @@
     margin-top: 50px;
     padding: 1em 0.5em;
 }
+
+@media screen and (min-width: 834px){
+    .workSection {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-between;
+    }
+}
