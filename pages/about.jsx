@@ -11,7 +11,7 @@ const ABOUTPAGE_QUERY = `
         page(filter: {name: {eq: "About"}}) {
             content
             pageImage {
-              responsiveImage {
+              responsiveImage (imgixParams: { fit: fill, w: 560, h: 350, auto: format }) {
                 aspectRatio
                 alt
                 base64
@@ -53,7 +53,7 @@ const AboutPage = ({ data }) => {
         <MainLayout>
             <section className={styles.aboutSection}>
                 <div className={styles.aboutImage}>
-                    <Image data={pageImage.responsiveImage}/>
+                    <Image data={pageImage.responsiveImage} explicitWidth="100%"/>
                 </div>
                 <div className={styles.pageText} dangerouslySetInnerHTML={{__html: text}}/>
             </section>
