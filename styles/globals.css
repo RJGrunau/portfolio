@@ -3,6 +3,11 @@
   --light-font-color: rgba(253, 253, 253, 0.95);
   --light-font-color-faded: rgba(253, 253, 253, 0.80);
   --dark-background: rgba(27, 27, 27, 0.8);
+
+
+  /* fonts */
+  --headline-font: cantiga, sans-serif;
+  --graph-fonts: allotrope, sans-serif;
 }
 /* Box sizing rules */
 *,
@@ -69,9 +74,19 @@ select {
 
 /* global styles */
 
+h1,
+h2,
+h3,
+h4{
+  font-family: var(--headline-font);
+  font-weight: 300;
+}
+
 p{
+  font-family: var(--graph-fonts);
+  font-weight: 300;
   color: var(--light-font-color-faded);
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin: 10px 0;
 }
 
@@ -83,6 +98,10 @@ time{
 a[class]{
   color: var(--light-font-color-faded);
   text-decoration: none;
+}
+
+nav.navLinks{
+  font-family: var(--graph-fonts);
 }
 
 a[class]:visited{
@@ -110,6 +129,12 @@ picture {
   grid-row: 1/4;
 }
 
+
+@media screen and (min-width: 834px){
+  h1 {
+    font-size: 2em;
+  }
+}
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {

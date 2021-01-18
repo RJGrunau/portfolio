@@ -18,7 +18,7 @@
 @media screen and (min-width: 834px){
     .authSection {
         max-width: 800px;
-        margin: 0 auto;
+        margin: 75px auto;
     }
 
     .authPic {

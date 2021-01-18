@@ -33,4 +33,5 @@
     font-size: 22px;
     margin: 0 8px;
     text-decoration: none;
+    font-family: var(--graph-fonts);
 }

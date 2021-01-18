@@ -1,6 +1,7 @@
 import styles from './layout.module.css';
 
 import SiteHeader from '../header/header';
+import SiteFooter from '../footer/footer';
 
 const MainLayout = ({children}) => {
     return ( 
@@ -8,7 +9,8 @@ const MainLayout = ({children}) => {
         <SiteHeader/>
             <main className={styles.main}>
                 {children}
-            </main>    
+            </main>  
+        <SiteFooter/>  
     </div>
     );
 }
