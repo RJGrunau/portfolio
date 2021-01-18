@@ -90,7 +90,7 @@ const Project = ({data}) => {
                 <div className={styles.projectContent} dangerouslySetInnerHTML={{__html: content}}/>
                 <div className={styles.projectGallery}>
                     {projGallery.map(img => (
-                        <div className={styles.galleryImage}>
+                        <div key={img.title} className={styles.galleryImage}>
                             <Image data={img.responsiveImage} />
                         </div>
                     ))}
