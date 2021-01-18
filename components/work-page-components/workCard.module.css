@@ -1,9 +1,15 @@
+.linkStyle {
+    text-decoration: none;
+    
+}
+
 .workCard {
     margin: 35px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3,1fr);
 }
+
 
 .projectImage {
     grid-column: 1/3;
@@ -23,12 +29,13 @@
 }
 
 @media screen and (min-width: 834px){
-    .workCard {
-        grid-template-rows: 1fr 1fr;
-    }
+    
 
     .projTitleCard {
-        grid-row: 1/3;
+        grid-row: 3/4;
         align-self: center;
     }
+
+    
+
 }

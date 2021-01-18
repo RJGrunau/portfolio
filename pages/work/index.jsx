@@ -11,7 +11,7 @@ const WORKPAGE_QUERY = `
             slug
             title
             coverImage {
-              responsiveImage (imgixParams: { fit: fill, w: 400, h: 275, auto: format }) {
+              responsiveImage (imgixParams: { fit: fill, w: 500, h: 500, auto: format }) {
                 alt
                 aspectRatio
                 base64
