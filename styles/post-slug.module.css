@@ -15,7 +15,21 @@
    font-size: 1.16em; 
 }
 .postContent {
-    /* padding: 1em 0.5em; */
     margin-top: 25px;
-    font-size: 1.18em;
+    font-size: 1.2em;
+}
+
+@media screen and (min-width: 834px){
+    .article {
+        max-width: 800px;
+        margin: 75px auto;
+    }
+
+    .postTitle {
+        font-size: 2em;
+    }
+
+    .postContent {
+        font-size: 1.34em;
+    }
 }

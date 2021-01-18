@@ -9,3 +9,22 @@
 .pageText {
     margin: 25px 0;
 }
+
+@media screen and (min-width: 834px){
+    .aboutSection {
+        max-width: 800px;
+        margin: 75px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .aboutImage {
+        flex: 0 0 60%;
+        margin: 25px auto;
+    }
+
+    .pageText {
+        font-size: 1.4em;
+    }
+}
