@@ -23,4 +23,8 @@
         flex: 0 0 60%;
         margin: 25px auto;
     }
+
+    .pageText {
+        font-size: 1.4em;
+    }
 }
