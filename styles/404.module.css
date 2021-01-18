@@ -1,0 +1,9 @@
+.pageDiv {
+    display: flex;
+    width: 100%;
+    max-width: 960px;
+    margin: 75px auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
