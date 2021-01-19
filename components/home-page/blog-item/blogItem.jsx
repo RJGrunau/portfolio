@@ -15,7 +15,7 @@ const BlogItem = ({slug,title,coverPhoto,excerpt,date}) => {
     return ( 
         <li className={styles.item}>
             <Link href={`posts/${slug}`}>
-                <a className={styles.blogLink} aria-label={`Read post ${title}`} aria-descripiton>
+                <a className={styles.blogLink} aria-label={`Read post ${title}`} >
                     <div className={styles.titleBlock}>
                         <h2 className={styles.title}>
                             {title}

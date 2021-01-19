@@ -51,12 +51,12 @@ const AboutPage = ({ data }) => {
 
     return ( 
         <MainLayout>
-            <section className={styles.aboutSection}>
+            <article className={styles.aboutSection}>
                 <div className={styles.aboutImage}>
                     <Image data={pageImage.responsiveImage} explicitWidth="100%"/>
                 </div>
                 <article className={styles.pageText} dangerouslySetInnerHTML={{__html: text}}/>
-            </section>
+            </article>
         </MainLayout>
     );
 }
