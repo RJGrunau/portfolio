@@ -4,7 +4,7 @@ import { Image } from 'react-datocms'
 const AuthorBlock = ({authData}) => {
     return (  
         <section className={styles.authSection}>
-            <div className={styles.busCard}>
+            <div className={styles.busCard} tabIndex="0">
                 <h1>{authData.authorname}</h1>
                 <h3>{authData.jobtitle}</h3>
             </div>

@@ -14,18 +14,18 @@ const BlogItem = ({slug,title,coverPhoto,excerpt,date}) => {
 
     return ( 
         <li className={styles.item}>
-            <Link href={`blog/${slug}`}>
-                <a className={styles.blogLink}>
+            <Link href={`posts/${slug}`}>
+                <a className={styles.blogLink} aria-label={`Read post ${title}`} aria-descripiton>
                     <div className={styles.titleBlock}>
                         <h2 className={styles.title}>
                             {title}
                         </h2>
                         <time>{date}</time>
                     </div>
-                    <div className={styles.blogImage}>
-                        <Image data={coverPhoto.responsiveImage} explicitWidth="100%"/>
+                    <div className={styles.blogImage} aria-hidden="true">
+                        <Image aria-label={coverPhoto.title} data={coverPhoto.responsiveImage} explicitWidth="100%" alt={coverPhoto.alt}/>
                     </div>
-                    <article className={styles.postTease} dangerouslySetInnerHTML={{__html: postExcerpt}}/>
+                    <article className={styles.postTease} aria-label={postExcerpt} dangerouslySetInnerHTML={{__html: postExcerpt}}/>
                 </a>
             </Link>
         </li>
