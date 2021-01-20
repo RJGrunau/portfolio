@@ -7,7 +7,7 @@ const SiteHeader = () => {
         <header className={styles.header}>
             <div className={styles.logoHolder}>
                 <Link href="/">
-                    <a className="anchor"> 
+                    <a className="anchor" aria-label="link to home page"> 
                         <Logo/>
                     </a>
                 </Link>
