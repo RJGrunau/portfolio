@@ -1,9 +1,8 @@
 /*resets*/
-:root{
+:root {
   --light-font-color: rgba(253, 253, 253, 0.95);
-  --light-font-color-faded: rgba(253, 253, 253, 0.80);
+  --light-font-color-faded: rgba(253, 253, 253, 0.8);
   --dark-background: rgba(27, 27, 27, 0.8);
-
 
   /* fonts */
   --headline-font: cantiga, sans-serif;
@@ -55,6 +54,11 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+  color: rgba(130, 105, 243, 0.952);
+}
+
+a:not([class]):visited {
+  color: rgba(139, 117, 236, 0.8);
 }
 
 /* Make images easier to work with */
@@ -77,12 +81,12 @@ select {
 h1,
 h2,
 h3,
-h4{
+h4 {
   font-family: var(--headline-font);
   font-weight: 300;
 }
 
-p{
+p {
   font-family: var(--graph-fonts);
   font-weight: 300;
   color: var(--light-font-color-faded);
@@ -90,21 +94,21 @@ p{
   margin: 10px 0;
 }
 
-time{
+time {
   color: var(--light-font-color-faded);
 }
 
 /*link styles*/
-a[class]{
+a[class] {
   color: var(--light-font-color-faded);
   text-decoration: none;
 }
 
-nav.navLinks{
+nav.navLinks {
   font-family: var(--graph-fonts);
 }
 
-a[class]:visited{
+a[class]:visited {
   color: var(--light-font-color-faded);
 }
 a[class]:hover {
@@ -115,7 +119,7 @@ a[class]:hover {
 h1,
 h2,
 h3,
-h4{
+h4 {
   color: var(--light-font-color);
 }
 
@@ -129,8 +133,7 @@ picture {
   grid-row: 1/4;
 }
 
-
-@media screen and (min-width: 834px){
+@media screen and (min-width: 834px) {
   h1 {
     font-size: 2em;
   }
@@ -147,4 +150,3 @@ picture {
     scroll-behavior: auto !important;
   }
 }
-
