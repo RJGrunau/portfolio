@@ -3,6 +3,7 @@ import { request } from '../libs/datocms'
 import MainLayout from '../components/layout-components/layout/layout'
 import BlogBlock from '../components/home-page/blog-block/blogBlock'
 import AuthorBlock from '../components/home-page/author-block/authorBlock'
+import GalleryBlock from '../components/home-page/gallery-block/gallery-block'
 
 const HOMEPAGE_QUERY = `
   query HomePage ($limit: IntType){
@@ -76,6 +77,7 @@ export default function Home({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
+        <GalleryBlock/>
         <AuthorBlock authData={authData}/>
         <BlogBlock posts={posts}/>
       </MainLayout>
