@@ -6,6 +6,10 @@ import AuthorBlock from '../components/home-page/author-block/authorBlock'
 
 const HOMEPAGE_QUERY = `
   query HomePage ($limit: IntType){
+    author {
+      authorname
+      jobtitle
+    }
     page(filter: {name: {eq: "Home"}}) {
       id
       pageGallery {
@@ -63,7 +67,7 @@ export async function getStaticProps() {
 
 export default function Home({data}) {
   const posts = data.allPosts;
-  const authData = data.author;
+  const authData = data.author
   const page = data.page;
   return (
     <>
