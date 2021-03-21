@@ -1,18 +1,12 @@
 .authSection {
     width: 100%;
-    margin-top: 50px;
-    text-align: center;
+    margin-top: 40px;
     padding: 0.5em;
 }
 
 .busCard {
     width: 100%;
     margin: 25px 0;
-}
-
-.authPic{
-    padding: 1.3em;
-    background-color: rgba(253, 253, 253, 0.95);
 }
 
 @media screen and (min-width: 834px){
@@ -24,5 +18,11 @@
     .authPic {
         background-color: transparent;
         display: none;
+    }
+}
+
+@media screen and (min-width: 1300px){
+    .authSection{
+        max-width: 1100px;
     }
 }
