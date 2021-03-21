@@ -8,6 +8,7 @@ const GalleryBlock = ({pageImage}) => {
         <section className={styles.section}>
             <div className={styles.photoHolder}>
                 <Image data={pageImage.responsiveImage}/>
+                <p>{pageImage.responsiveImage.title}</p>
             </div>
         </section>
      );
