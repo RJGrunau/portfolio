@@ -1,29 +1,26 @@
 import Head from 'next/head'
 import { request } from '../libs/datocms'
-import styles from '../styles/Home.module.css'
 import MainLayout from '../components/layout-components/layout/layout'
 import BlogBlock from '../components/home-page/blog-block/blogBlock'
 import AuthorBlock from '../components/home-page/author-block/authorBlock'
 
 const HOMEPAGE_QUERY = `
   query HomePage ($limit: IntType){
-    author {
-      authorPhoto {
-        responsiveImage (imgixParams: { fit: crop, w: 300, h: 300, auto: format }){
+    page(filter: {name: {eq: "Home"}}) {
+      id
+      pageGallery {
+        responsiveImage {
           alt
+          aspectRatio
+          height
+          sizes
           src
           srcSet
           title
-          aspectRatio
-          base64
-          bgColor
-          width
           webpSrcSet
-          height
+          width
         }
       }
-      authorname
-      jobtitle
     }
     allPosts (first: $limit) {
       id
@@ -66,8 +63,8 @@ export async function getStaticProps() {
 
 export default function Home({data}) {
   const posts = data.allPosts;
-  const authData = data.author
-  
+  const authData = data.author;
+  const page = data.page;
   return (
     <>
       <Head>
