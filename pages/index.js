@@ -13,10 +13,11 @@ const HOMEPAGE_QUERY = `
     }
     page(filter: {name: {eq: "Home"}}) {
       id
-      pageGallery {
+      pageImage {
         responsiveImage {
-          alt
           aspectRatio
+          alt
+          base64
           height
           sizes
           src
@@ -77,7 +78,7 @@ export default function Home({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
-        <GalleryBlock/>
+        <GalleryBlock pageImage={page.pageImage}/>
         <AuthorBlock authData={authData}/>
         <BlogBlock posts={posts}/>
       </MainLayout>
