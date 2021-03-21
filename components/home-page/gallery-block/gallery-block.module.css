@@ -1,6 +1,7 @@
 .section{
     width: 100%;
+    margin: 25 auto;
     padding: 1em 0.5em;
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
 }
