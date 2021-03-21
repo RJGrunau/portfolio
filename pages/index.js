@@ -12,7 +12,7 @@ const HOMEPAGE_QUERY = `
       jobtitle
     }
     page(filter: {name: {eq: "Home"}}) {
-      id
+      content
       pageImage {
         responsiveImage {
           aspectRatio
@@ -79,7 +79,7 @@ export default function Home({data}) {
       </Head>
       <MainLayout>
         <GalleryBlock pageImage={page.pageImage}/>
-        <AuthorBlock authData={authData}/>
+        <AuthorBlock authData={authData} shortBio={page.content}/>
         <BlogBlock posts={posts}/>
       </MainLayout>
     </>
