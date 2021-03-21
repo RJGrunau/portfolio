@@ -3,16 +3,13 @@ import styles from './gallery-block.module.css';
 import { Image } from 'react-datocms';
 
 const GalleryBlock = ({pageGallery}) => {
-    const [gallery, setGallery] = useState(null);
-    const [randNumber, setrandNumber] = useState(null);
+    
 
-    useEffect(() => {
-        const photos = pageGallery;
-        setGallery(photos);
-    })
     return ( 
         <section className={styles.section}>
-            test
+            <div className={styles.photoHolder}>
+                <Image data={pageGallery[0].responsiveImage}/>
+            </div>
         </section>
      );
 }
