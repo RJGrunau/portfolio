@@ -1,5 +1,4 @@
 import styles from './author-block.module.css'
-import { Image } from 'react-datocms'
 
 const AuthorBlock = ({authData}) => {
     return (  
