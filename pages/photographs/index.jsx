@@ -37,11 +37,15 @@ export async function getStaticProps() {
 }
 
 const Photographs = ({data}) => {
-    console.log(data);
+    const allGalleries = data.allPhotographs
     return ( 
         <MainLayout>
             <section>
-                hi
+                {allGalleries.map((gall,i) => (
+                    <div key={i}>
+                        <h2>{gall.title}</h2>
+                    </div>
+                ))}
             </section>
         </MainLayout>
     );
