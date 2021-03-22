@@ -1,5 +1,7 @@
-import { request } from '../../libs/datocms'
-import MainLayout from '../../components/layout-components/layout/layout'
+import { request } from '../../libs/datocms';
+import styles from '../../styles/photographs.module.css'
+import MainLayout from '../../components/layout-components/layout/layout';
+import { Image } from 'react-datocms';
 
 const PHOTOGRAPHS_QUERY = `
     query PhotographsPage {
@@ -38,14 +40,22 @@ export async function getStaticProps() {
 
 const Photographs = ({data}) => {
     const allGalleries = data.allPhotographs
+    console.log(allGalleries.gallery);
     return ( 
         <MainLayout>
-            <section>
-                {allGalleries.map((gall,i) => (
-                    <div key={i}>
-                        <h2>{gall.title}</h2>
-                    </div>
-                ))}
+            <section className={styles.galleriesSection}>
+                <ul className={styles.galleryList}>
+                    {allGalleries.map((gall,i) => (
+                        <li>
+                                <div className={styles.galleryCard} key={i}>
+                                    <div>
+                                        <Image data={gall.gallery[0].responsiveImage}/>
+                                    </div>
+                                    <h2>{gall.title}</h2>
+                                </div>
+                        </li>
+                    ))}
+                </ul>
             </section>
         </MainLayout>
     );

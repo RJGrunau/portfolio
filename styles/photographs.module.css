@@ -1,0 +1,15 @@
+.galleriesSection {
+    margin: 50px auto;
+    width: 90%;
+}
+
+.galleryList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.galleryCard {
+    display: flex;
+    flex-direction: column;
+}
