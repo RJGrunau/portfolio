@@ -1,28 +1,28 @@
 import markdownToHtml from '../../libs/markdownToHTML';
-
+import { request } from '../../libs/datocms';
 import { Image } from 'react-datocms'
 import MainLayout from '../../components/layout-components/layout/layout';
-import request from 'graphql-request';
 
-const GALLERIESBYSLUG_QUERY = `
-    query GalleriesBySlug ($slug: String){
+
+const GALLERYBYSLUG_QUERY = `
+    query GalleryBySlug ($slug: String){
         photograph(filter: {slug: {eq: $slug}}) {
-            id 
+            id
             slug
             title
             gallery {
-                responsiveImage {
-                    alt
-                    aspectRatio
-                    base64
-                    height
-                    sizes
-                    src
-                    srcSet
-                    title
-                    webpSrcSet
-                    width
-                }
+              responsiveImage {
+                alt
+                aspectRatio
+                base64
+                height
+                sizes
+                src
+                srcSet
+                title
+                webpSrcSet
+                width
+              }
             }
         }
     }
@@ -39,7 +39,7 @@ export async function getStaticPaths(){
 
 export async function getStaticProps({params}){
     const data = await request({
-        query: GALLERIESBYSLUG_QUERY,
+        query: GALLERYBYSLUG_QUERY,
         variables: {
             slug: params.slug
         }
@@ -55,7 +55,7 @@ export async function getStaticProps({params}){
 const Gallery = ({data}) => {
     return (  
         <MainLayout>
-            {data.title}
+            {data.photograph.title}
         </MainLayout>
     );
 }
