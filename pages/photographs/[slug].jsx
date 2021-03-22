@@ -5,7 +5,7 @@ import MainLayout from '../../components/layout-components/layout/layout';
 import request from 'graphql-request';
 
 const GALLERIESBYSLUG_QUERY = `
-    query GalleryBySlug ($slug: String){
+    query GalleriesBySlug ($slug: String){
         photograph(filter: {slug: {eq: $slug}}) {
             id 
             slug
