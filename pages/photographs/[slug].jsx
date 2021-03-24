@@ -61,6 +61,7 @@ const Gallery = ({data}) => {
         <MainLayout>
             <div className={styles.photoHolder}>
                 <div className={styles.frame}>
+                    <div className={styles.previous}>prev</div>
                     <Image className={styles.photo} data={data.photograph.gallery[index].responsiveImage}/>
                 </div>
             </div>
