@@ -1,4 +1,6 @@
-import markdownToHtml from '../../libs/markdownToHTML';
+import React, {useEffect, useState} from 'react';
+import styles from '../../styles/gallery-page.module.css';
+// import markdownToHtml from '../../libs/markdownToHTML';
 import { request } from '../../libs/datocms';
 import { Image } from 'react-datocms'
 import MainLayout from '../../components/layout-components/layout/layout';
@@ -53,9 +55,13 @@ export async function getStaticProps({params}){
 }
 
 const Gallery = ({data}) => {
+    const [index, setIndex ] = useState(2);
+
     return (  
         <MainLayout>
-            {data.photograph.title}
+            <div className={styles.photoHolder}>
+                <Image data={data.photograph.gallery[index].responsiveImage}/>
+            </div>
         </MainLayout>
     );
 }
