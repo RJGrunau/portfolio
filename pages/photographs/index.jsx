@@ -4,6 +4,8 @@ import styles from '../../styles/photographs.module.css'
 import MainLayout from '../../components/layout-components/layout/layout';
 import Link from 'next/link';
 
+
+
 const PHOTOGRAPHS_QUERY = `
     query PhotographsPage {
         allPhotographs {

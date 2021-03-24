@@ -20,14 +20,17 @@
     z-index: 50;
     padding: 0.3em;
     align-self: center;
+    font-size: 22px;
 }
 
 .previous {
+    padding-left: 0.4em;
     grid-column: 1/2;
     grid-row: 2/3;
 }
 
 .next {
+    padding-right: 0.4em;
     grid-column: 4/5;
     grid-row: 2/3;
 }
