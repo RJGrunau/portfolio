@@ -60,7 +60,9 @@ const Gallery = ({data}) => {
     return (  
         <MainLayout>
             <div className={styles.photoHolder}>
-                <Image data={data.photograph.gallery[index].responsiveImage}/>
+                <div className={styles.frame}>
+                    <Image className={styles.photo} data={data.photograph.gallery[index].responsiveImage}/>
+                </div>
             </div>
         </MainLayout>
     );
