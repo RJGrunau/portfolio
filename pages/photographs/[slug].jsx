@@ -4,6 +4,7 @@ import styles from '../../styles/gallery-page.module.css';
 import { request } from '../../libs/datocms';
 import { Image } from 'react-datocms'
 import MainLayout from '../../components/layout-components/layout/layout';
+import {IoChevronBack,IoChevronForward} from 'react-icons/io5'
 
 
 const GALLERYBYSLUG_QUERY = `
@@ -89,14 +90,14 @@ const Gallery = ({data}) => {
                         className={styles.previous}
                         onClick={decrementSlide}
                     >
-                        prev
+                        <IoChevronBack/>
                     </div>
                     <Image className={styles.photo} data={data.photograph.gallery[index].responsiveImage}/>
                     <div 
                         className={styles.next}
                         onClick={incrementSlide}
                     >
-                        next
+                        <IoChevronForward/>
                     </div>
                 </div>
             </div>
