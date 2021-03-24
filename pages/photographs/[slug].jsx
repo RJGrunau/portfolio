@@ -56,19 +56,41 @@ export async function getStaticProps({params}){
 
 const Gallery = ({data}) => {
     const photographs = data.photograph.gallery;
-    const [index, setIndex ] = useState(2);
+    const [index, setIndex ] = useState(0);
+    
     const incrementSlide = () => {
         let galleryLength = photographs.length;
         galleryLength = galleryLength - 1;
         let currentPhoto = index;
         currentPhoto ++ 
+        if(currentPhoto > galleryLength){
+            currentPhoto = 0;
+            setIndex(currentPhoto);
+        }
+        setIndex(currentPhoto);
+    }
+
+    const decrementSlide = () => {
+        let galleryLength = photographs.length;
+        galleryLength = galleryLength - 1;
+        let currentPhoto = index;
+        currentPhoto --;
+        if(currentPhoto <= 0){
+            currentPhoto = galleryLength;
+            setIndex(currentPhoto);
+        }
         setIndex(currentPhoto);
     }
     return (  
         <MainLayout>
             <div className={styles.photoHolder}>
                 <div className={styles.frame}>
-                    <div className={styles.previous}>prev</div>
+                    <div 
+                        className={styles.previous}
+                        onClick={decrementSlide}
+                    >
+                        prev
+                    </div>
                     <Image className={styles.photo} data={data.photograph.gallery[index].responsiveImage}/>
                     <div 
                         className={styles.next}
