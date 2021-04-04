@@ -101,19 +101,19 @@ time {
 
 /*link styles*/
 a[class] {
-  color: var(--light-font-color-faded);
   text-decoration: none;
 }
 
 nav.navLinks {
   font-family: var(--graph-fonts);
+  color: var(--dark-background);
 }
 
 a[class]:visited {
-  color: var(--light-font-color-faded);
+  color: var(--dark-background);
 }
 a[class]:hover {
-  color: var(--light-font-color);
+  color: var(--dark-background);
   transition: ease-in 0.5ms;
 }
 
