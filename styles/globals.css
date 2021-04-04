@@ -48,7 +48,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background-color: var(--light-font-color);
-  color: var(--light-font-color);
+  color: var(--dark-background);
 }
 
 /* A elements that don't have a class get default styles */
@@ -90,13 +90,13 @@ h4 {
 p {
   font-family: var(--graph-fonts);
   font-weight: 300;
-  color: var(--light-font-color-faded);
+  color: var(--dark-background);
   font-size: 1.1em;
   margin: 10px 0;
 }
 
 time {
-  color: var(--light-font-color-faded);
+  color: var(--dark-background);
 }
 
 /*link styles*/
