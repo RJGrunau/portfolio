@@ -1,0 +1,36 @@
+.galleriesSection {
+    margin: 50px auto;
+    width: 90%;
+}
+
+.galleryList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.galleryListItem {
+    width: 100%;
+}
+
+.galleryCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.photoHolder {
+    padding: 1em;
+    background: rgb(245, 245, 245);
+}
+
+@media screen and (min-width: 1100px){
+
+    .galleryList {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .photoHolder {
+        padding: 1.5em;
+    }
+}

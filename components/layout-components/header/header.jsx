@@ -29,6 +29,13 @@ const SiteHeader = () => {
                         </Link>
                     </li>
                     <li>
+                        <Link href="/photographs">
+                            <a className={styles.navLink}>
+                                Photographs
+                            </a>
+                        </Link>
+                    </li>
+                    <li>
                         <Link href="/about">
                             <a className={styles.navLink}>
                                 About

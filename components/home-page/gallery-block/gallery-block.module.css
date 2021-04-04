@@ -1,0 +1,26 @@
+.section{
+    width: 100%;
+    margin: 25px auto;
+    padding: 1em 0.5em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photoHolder {
+    width: 95%;
+    margin: 0 auto;
+    padding: 1em;
+    background: rgb(245, 245, 245);
+    
+}
+
+.p {
+    padding-top: 0.4em;
+    color: rgba(27, 27, 27, 0.8);  
+}
+
+@media screen and (min-width: 1000px){
+    .section {
+        margin: 100px auto;
+    }
+}

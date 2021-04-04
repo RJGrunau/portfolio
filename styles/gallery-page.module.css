@@ -1,0 +1,46 @@
+.photoHolder {
+    width: 95%;
+    margin: 50px auto;
+}
+
+.frame {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 1fr 75px 1fr;
+}
+
+.photo{
+    grid-column: 1/5;
+    grid-row: 1/5;
+}
+
+.previous, .next{
+    z-index: 50;
+    padding: 0.3em;
+    align-self: center;
+    font-size: 22px;
+}
+
+.previous:focus,.next:focus {
+    outline: 2px rgb(56, 56, 243) solid;
+}
+
+.previous {
+    padding-left: 0.4em;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.next {
+    padding-right: 0.4em;
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+@media screen and (min-width: 1300px){
+    .photoHolder {
+        margin: 75px auto;
+    }
+}
