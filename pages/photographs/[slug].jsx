@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import styles from '../../styles/gallery-page.module.css';
-// import markdownToHtml from '../../libs/markdownToHTML';
 import { request } from '../../libs/datocms';
 import { Image } from 'react-datocms'
 import MainLayout from '../../components/layout-components/layout/layout';
@@ -89,6 +88,9 @@ const Gallery = ({data}) => {
                     <div 
                         className={styles.previous}
                         onClick={decrementSlide}
+                        onKeyDown={decrementSlide}
+                        tabIndex="0"
+                        aria-label="previous photo"
                     >
                         <IoChevronBack/>
                     </div>
@@ -96,6 +98,9 @@ const Gallery = ({data}) => {
                     <div 
                         className={styles.next}
                         onClick={incrementSlide}
+                        onKeyDown={incrementSlide}
+                        tabIndex="0"
+                        aria-label="next photo"
                     >
                         <IoChevronForward/>
                     </div>

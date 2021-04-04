@@ -23,6 +23,10 @@
     font-size: 22px;
 }
 
+.previous, .next:focus {
+    outline: rgb(56, 56, 243);
+}
+
 .previous {
     padding-left: 0.4em;
     grid-column: 1/2;
