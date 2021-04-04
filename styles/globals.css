@@ -116,6 +116,9 @@ a[class]:hover {
   color: var(--dark-background);
   transition: ease-in 0.5ms;
 }
+a:focus {
+  outline: 2px solid rgba(139, 117, 236, 0.8);
+}
 
 h1,
 h2,
