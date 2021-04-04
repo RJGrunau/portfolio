@@ -58,7 +58,10 @@ const Gallery = ({data}) => {
     const photographs = data.photograph.gallery;
     const [index, setIndex ] = useState(0);
     
-    const incrementSlide = () => {
+    const incrementSlide = (e) => {
+        if((e.keyCode === 9 && e.shitKey)||e.keyCode === 9){
+            return;
+        }
         let galleryLength = photographs.length;
         galleryLength = galleryLength - 1;
         let currentPhoto = index;
@@ -70,7 +73,10 @@ const Gallery = ({data}) => {
         setIndex(currentPhoto);
     }
 
-    const decrementSlide = () => {
+    const decrementSlide = (e) => {
+        if((e.keyCode === 9 && e.shitKey)||e.keyCode === 9){
+            return;
+        }
         let galleryLength = photographs.length;
         galleryLength = galleryLength - 1;
         let currentPhoto = index;
