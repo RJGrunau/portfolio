@@ -23,7 +23,7 @@
     font-size: 22px;
 }
 
-.previous,.next:focus {
+.previous:focus,.next:focus {
     outline: 2px rgb(56, 56, 243) solid;
 }
 
