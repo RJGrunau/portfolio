@@ -49,7 +49,7 @@ const Photographs = ({data}) => {
                 <ul className={styles.galleryList}>
                     {allGalleries.map((gall,i) => (
                         <li>
-                            <Link href={`photographs/${gall.slug}`} aria-label={`See ${gallery.title} photos`}>
+                            <Link href={`photographs/${gall.slug}`} aria-label={`See ${gall.title} photos`}>
                                 <div className={styles.galleryCard} key={i}>
                                     <div className={styles.photoHolder}>
                                         <Image data={gall.gallery[0].responsiveImage}/>
