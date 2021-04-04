@@ -28,6 +28,7 @@
 
 .projTitle {
     font-size: 2em;
+    color: var(--light-font-color);
 }
 
 @media screen and (min-width: 834px){

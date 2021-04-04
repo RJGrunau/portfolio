@@ -73,11 +73,7 @@ export default function Home({data}) {
   const page = data.page;
   return (
     <>
-      <Head>
-        <title>Robert Grunau</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <MainLayout>
+      <MainLayout title={"Home"}>
         <GalleryBlock pageImage={page.pageImage}/>
         <AuthorBlock authData={authData} shortBio={page.content}/>
         <BlogBlock posts={posts}/>

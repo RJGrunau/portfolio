@@ -47,8 +47,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: var(--dark-background);
-  color: var(--light-font-color);
+  background-color: var(--light-font-color);
+  color: var(--dark-background);
 }
 
 /* A elements that don't have a class get default styles */
@@ -83,44 +83,48 @@ h2,
 h3,
 h4 {
   font-family: var(--headline-font);
+  color: var(--dark-background);
   font-weight: 300;
 }
 
 p {
   font-family: var(--graph-fonts);
   font-weight: 300;
-  color: var(--light-font-color-faded);
+  color: var(--dark-background);
   font-size: 1.1em;
   margin: 10px 0;
 }
 
 time {
-  color: var(--light-font-color-faded);
+  color: var(--dark-background);
 }
 
 /*link styles*/
 a[class] {
-  color: var(--light-font-color-faded);
   text-decoration: none;
 }
 
 nav.navLinks {
   font-family: var(--graph-fonts);
+  color: var(--dark-background);
 }
 
 a[class]:visited {
-  color: var(--light-font-color-faded);
+  color: var(--dark-background);
 }
 a[class]:hover {
-  color: var(--light-font-color);
+  color: var(--dark-background);
   transition: ease-in 0.5ms;
+}
+a:focus {
+  outline: 2px solid rgba(139, 117, 236, 0.8);
 }
 
 h1,
 h2,
 h3,
 h4 {
-  color: var(--light-font-color);
+  color: var(--dark-background);
 }
 
 picture {

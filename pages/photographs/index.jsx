@@ -44,11 +44,11 @@ export async function getStaticProps() {
 const Photographs = ({data}) => {
     const allGalleries = data.allPhotographs
     return ( 
-        <MainLayout>
+        <MainLayout title="Photography">
             <section className={styles.galleriesSection}>
                 <ul className={styles.galleryList}>
                     {allGalleries.map((gall,i) => (
-                        <li>
+                        <li className={styles.galleryListItem}>
                             <Link href={`photographs/${gall.slug}`} aria-label={`See ${gall.title} photos`} >
                                 <div className={styles.galleryCard} key={i}>
                                     <div className={styles.photoHolder}>

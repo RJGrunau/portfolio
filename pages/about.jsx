@@ -50,7 +50,7 @@ const AboutPage = ({ data }) => {
     })
 
     return ( 
-        <MainLayout>
+        <MainLayout title="About">
             <article className={styles.aboutSection}>
                 <div className={styles.aboutImage}>
                     <Image data={pageImage.responsiveImage} explicitWidth="100%"/>

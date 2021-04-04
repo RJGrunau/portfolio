@@ -65,7 +65,7 @@ const PostSlug = ({data}) => {
         setContent(text)
     })
     return ( 
-        <MainLayout>
+        <MainLayout title={data.post.title}>
             <article className={styles.article}>
                 <Image data={data.post.coverPhoto.responsiveImage}/>
                 <div className={styles.titleBlock}>

@@ -82,7 +82,7 @@ const Project = ({data}) => {
         setContent(text);
     })
     return ( 
-        <MainLayout>
+        <MainLayout title={project.title}>
             <article className={styles.workItem}>
                 <div className={styles.image}>
                     <Image data={project.coverImage.responsiveImage}/>
