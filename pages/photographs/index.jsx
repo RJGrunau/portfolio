@@ -44,7 +44,7 @@ export async function getStaticProps() {
 const Photographs = ({data}) => {
     const allGalleries = data.allPhotographs
     return ( 
-        <MainLayout>
+        <MainLayout title="Photography">
             <section className={styles.galleriesSection}>
                 <ul className={styles.galleryList}>
                     {allGalleries.map((gall,i) => (

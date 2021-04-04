@@ -30,7 +30,7 @@ export async function getStaticProps(){
 const PostsPage = ({data}) => {
     
     return ( 
-        <Layout>
+        <Layout title="Blog">
             <section className={styles.postSection}>
                 <ol className={styles.ol}>
                     {data.allPosts.map(p => (

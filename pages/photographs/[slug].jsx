@@ -56,6 +56,7 @@ export async function getStaticProps({params}){
 
 const Gallery = ({data}) => {
     const photographs = data.photograph.gallery;
+    const title = data.photograph.title;
     const [index, setIndex ] = useState(0);
     
     const incrementSlide = (e) => {
@@ -88,7 +89,7 @@ const Gallery = ({data}) => {
         setIndex(currentPhoto);
     }
     return (  
-        <MainLayout>
+        <MainLayout title={title}>
             <div className={styles.photoHolder}>
                 <div className={styles.frame}>
                     <div 

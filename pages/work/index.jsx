@@ -43,7 +43,7 @@ export async function getStaticProps() {
 const WorkPage = ({data}) => {
     const allProjects = data.allProjects
     return ( 
-        <MainLayout>
+        <MainLayout title="Work">
             <section className={styles.workSection}>
                 {allProjects.map(proj => (
                     <WorkCard 
