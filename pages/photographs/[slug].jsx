@@ -91,8 +91,9 @@ const Gallery = ({data}) => {
                         onKeyDown={decrementSlide}
                         tabIndex="0"
                         aria-label="previous photo"
+                        role="button"
                     >
-                        <IoChevronBack/>
+                        <IoChevronBack aria-hidden="true"/>
                     </div>
                     <Image className={styles.photo} data={data.photograph.gallery[index].responsiveImage}/>
                     <div 
@@ -101,8 +102,9 @@ const Gallery = ({data}) => {
                         onKeyDown={incrementSlide}
                         tabIndex="0"
                         aria-label="next photo"
+                        role="button"
                     >
-                        <IoChevronForward/>
+                        <IoChevronForward aria-hidden="true"/>
                     </div>
                 </div>
             </div>
