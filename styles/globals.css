@@ -47,7 +47,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: var(--dark-background);
+  background-color: var(--light-font-color);
   color: var(--light-font-color);
 }
 
@@ -83,6 +83,7 @@ h2,
 h3,
 h4 {
   font-family: var(--headline-font);
+  color: var(--dark-background);
   font-weight: 300;
 }
 
