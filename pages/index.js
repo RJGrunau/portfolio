@@ -36,7 +36,7 @@ const HOMEPAGE_QUERY = `
       slug
       coverPhoto {
         alt
-        responsiveImage (imgixParams: { fit: fill, w: 400, h: 400, auto: format }){
+        responsiveImage(imgixParams: { fit: fill, w: 400, h: 400, auto: format }){
           sizes
           aspectRatio
           alt
@@ -76,7 +76,7 @@ export default function Home({data}) {
       <MainLayout title={"Home"}>
         <GalleryBlock pageImage={page.pageImage}/>
         <AuthorBlock authData={authData} shortBio={page.content}/>
-        <BlogBlock posts={posts}/>
+        {/* <BlogBlock posts={posts}/> */}
       </MainLayout>
     </>
      
