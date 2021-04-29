@@ -1,8 +1,9 @@
 /*resets*/
 :root {
-  --light-font-color: rgba(253, 253, 253, 0.95);
+  --background-color: rgba(253, 253, 253, 0.95);
   --light-font-color-faded: rgba(253, 253, 253, 0.8);
-  --dark-background: rgba(27, 27, 27, 0.8);
+  --dark-font: rgba(27, 27, 27, 0.8);
+  --darker-font: rgba(27, 27, 27, 0.979);
 
   /* fonts */
   --headline-font: cantiga, sans-serif;
@@ -47,7 +48,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: var(--light-font-color);
+  background-color: var(--background-color);
   color: var(--dark-background);
 }
 
@@ -109,11 +110,11 @@ nav.navLinks {
   color: var(--dark-background);
 }
 
-a[class]:visited {
+a[class]:visited,a[class] {
   color: var(--dark-background);
 }
 a[class]:hover {
-  color: var(--dark-background);
+  color: var(--darker-font);
   transition: ease-in 0.5ms;
 }
 a:focus {
