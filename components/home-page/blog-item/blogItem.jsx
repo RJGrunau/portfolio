@@ -1,17 +1,11 @@
-import React, {useState, useEffect } from 'react'
-import markdownToHTML  from '../../../libs/markdownToHTML'
-import styles from './blog-item.module.css'
 import Link from 'next/link'
 import { Image } from 'react-datocms'
+import ArticleText from '../../text-processor/articleText'
+import styles from './blog-item.module.css'
 
 const BlogItem = ({slug,title,coverPhoto,excerpt,date}) => {
-    const [postExcerpt, setPostExcerpt ] = useState(null);
-
-    useEffect(async () => {
-        const text = await markdownToHTML(excerpt);
-        setPostExcerpt(text);
-    })
-
+    console.log(coverPhoto);
+    
     return ( 
         <li className={styles.item}>
             <Link href={`posts/${slug}`}>
@@ -23,9 +17,9 @@ const BlogItem = ({slug,title,coverPhoto,excerpt,date}) => {
                         <time>{date}</time>
                     </div>
                     <div className={styles.blogImage} aria-hidden="true">
-                        <Image aria-label={coverPhoto.title} data={coverPhoto.responsiveImage} explicitWidth="100%" alt={coverPhoto.alt}/>
+                        {/* <Image data={coverPhoto.responsiveImage} explicitWidth="100%" alt={coverPhoto.alt}/> */}
                     </div>
-                    <article className={styles.postTease} aria-label={postExcerpt} dangerouslySetInnerHTML={{__html: postExcerpt}}/>
+                    <ArticleText copy={excerpt} look={styles.postTease} />
                 </a>
             </Link>
         </li>
