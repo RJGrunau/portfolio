@@ -76,7 +76,7 @@ export default function Home({data}) {
       <MainLayout title={"Home"}>
         <GalleryBlock pageImage={page.pageImage}/>
         <AuthorBlock authData={authData} shortBio={page.content}/>
-        {/* <BlogBlock posts={posts}/> */}
+        <BlogBlock posts={posts}/>
       </MainLayout>
     </>
      

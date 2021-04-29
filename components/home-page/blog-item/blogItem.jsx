@@ -17,7 +17,7 @@ const BlogItem = ({slug,title,coverPhoto,excerpt,date}) => {
                         <time>{date}</time>
                     </div>
                     <div className={styles.blogImage} aria-hidden="true">
-                        {/* <Image data={coverPhoto.responsiveImage} explicitWidth="100%" alt={coverPhoto.alt}/> */}
+                        <Image data={coverPhoto.responsiveImage} explicitWidth="100%" alt={coverPhoto.alt}/>
                     </div>
                     <ArticleText copy={excerpt} look={styles.postTease} />
                 </a>
