@@ -19,6 +19,7 @@
     "react-dom": "17.0.1",
     "react-icons": "^4.2.0",
     "remark": "^13.0.0",
-    "remark-html": "^13.0.1"
+    "remark-html": "^13.0.1",
+    "shopify-buy": "^2.11.0"
   }
 }
