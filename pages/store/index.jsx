@@ -1,0 +1,28 @@
+import { client } from '../../libs/shopify-client'
+import MainLayout from '../../components/layout-components/layout/layout'
+
+
+export const getServerSideProps = async (context) => {
+    const products = await client.product.fetchAll();
+    const info = await client.shop.fetchInfo();
+    
+    return {
+        props: {
+            infos: JSON.parse(JSON.stringify(info)),
+            products: JSON.parse(JSON.stringify(products))
+        }
+    }
+}
+
+const StorePage = (props) => {
+    console.log(props);
+    return(
+        <MainLayout>
+            <div>
+                products go here
+            </div>
+        </MainLayout>
+    )
+}
+
+export default StorePage;

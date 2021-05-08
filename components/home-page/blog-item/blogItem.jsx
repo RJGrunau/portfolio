@@ -4,7 +4,6 @@ import ArticleText from '../../text-processor/articleText'
 import styles from './blog-item.module.css'
 
 const BlogItem = ({slug,title,coverPhoto,excerpt,date}) => {
-    console.log(coverPhoto);
     
     return ( 
         <li className={styles.item}>
