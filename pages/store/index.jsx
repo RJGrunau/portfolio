@@ -1,6 +1,8 @@
 import { client } from '../../libs/shopify-client'
 import MainLayout from '../../components/layout-components/layout/layout'
 
+import styles from "../../styles/products-page.module.css"
+
 
 export const getServerSideProps = async (context) => {
     const products = await client.product.fetchAll();
@@ -18,7 +20,7 @@ const StorePage = (props) => {
     console.log(props);
     return(
         <MainLayout>
-            <div>
+            <div className={styles.productContainer}>
                 products go here
             </div>
         </MainLayout>
