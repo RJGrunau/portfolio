@@ -1,7 +1,9 @@
+import {useState, useEffect} from 'react'
 import { client } from '../../libs/shopify-client'
 import MainLayout from '../../components/layout-components/layout/layout'
 
 import styles from "../../styles/products-page.module.css"
+import Product from '../../components/products/indv-product/product'
 
 
 export const getServerSideProps = async (context) => {
@@ -17,11 +19,12 @@ export const getServerSideProps = async (context) => {
 }
 
 const StorePage = (props) => {
-    console.log(props);
     return(
-        <MainLayout>
+        <MainLayout title="Store">
             <div className={styles.productContainer}>
-                products go here
+                {props.products.map((p,i) => (
+                    <Product key={i} name={p.title}/>
+                ))}
             </div>
         </MainLayout>
     )
