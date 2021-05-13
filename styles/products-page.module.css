@@ -4,4 +4,12 @@
     margin: 100px auto;
     display: flex;
     flex-flow: wrap row;
+    justify-content: space-evenly;
+}
+
+
+@media screen and (max-width: 834px) {
+    .productsContainer {
+        flex-flow: column;
+    }
 }

@@ -1,4 +1,30 @@
 .productContainer{
-    width: 33.33%;
+    width: 45.33%;
     margin: 15px;
+}
+
+.productLink {
+    display: inline-block;
+    width: 100%;
+}
+
+.productGrid{
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 375px 50px;
+}
+
+.productBacking {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    padding: 0.5em 0.3em;
+    background-color: rgba(212, 211, 211, 0.904);
+}
+
+.productName {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    font-size: 1.3rem;
+
 }
