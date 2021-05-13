@@ -2,7 +2,6 @@ import  Image  from 'next/image'
 import styles from "./product.module.css"
 
 const Product = ({name,id,image}) => {
-    // console.log(image);
     return ( 
         <div className={styles.productContainer}>
             <div>
