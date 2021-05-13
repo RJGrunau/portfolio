@@ -28,3 +28,10 @@
     font-size: 1.3rem;
 
 }
+
+@media screen and (min-width: 834px) {
+    .productContainer{
+        width: 95%;
+        margin: 15px auto;
+    }
+}
