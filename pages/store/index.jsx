@@ -19,11 +19,12 @@ export const getServerSideProps = async (context) => {
 }
 
 const StorePage = (props) => {
+    console.log(props.products);
     return(
         <MainLayout title="Store">
             <div className={styles.productContainer}>
                 {props.products.map((p,i) => (
-                    <Product key={i} name={p.title}/>
+                    <Product key={i} name={p.title} image={p.images[0]}/>
                 ))}
             </div>
         </MainLayout>
