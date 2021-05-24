@@ -1,4 +1,4 @@
-import  Image  from 'next/image'
+import  { Image }  from 'react-datocms'
 import Link from 'next/link'
 import styles from "./product.module.css"
 
@@ -9,7 +9,7 @@ const Product = ({name,id,image}) => {
                 <a className={styles.productLink}>
                     <div className={styles.productGrid}>
                         <div className={styles.productBacking}>
-                            <Image src={image.src} layout={`responsive`} width={350} height={200}/>
+                            <Image data={image.responsiveImage}/>
                         </div>
                         <div className={styles.productName}>
                             <span>{name}</span>

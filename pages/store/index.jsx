@@ -45,12 +45,11 @@ const StorePage = ({data}) => {
     console.log(data)
     return(
         <MainLayout title="Store">
-           STORE
-            {/* <div className={styles.productsContainer}>
-                {props.products.map((p,i) => (
-                    <Product key={i} name={p.title} id={p.id} image={p.images[0]}/>
+            <div className={styles.productsContainer}>
+                {data.allProducts.map((p,i) => (
+                    <Product key={i} name={p.title} id={p.id} image={p.productImages[0]}/>
                 ))}
-            </div> */}
+            </div>
         </MainLayout>
     )
 }
